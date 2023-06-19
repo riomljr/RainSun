@@ -10,12 +10,12 @@ async function getData (location = "New York") {
   const data = await response.json();
 
   return {
-    name: data.location.name,
-    weather: data.current.condition.text,
-    temp: parseInt(data.current.temp_f),
-    feelsLike: parseInt(data.current.feelslike_f),
-    humidity: parseInt(data.current.humidity),
-    wind: data.current.wind_mph,
+    Name: data.location.name,
+    Weather: data.current.condition.text,
+    Temp: parseInt(data.current.temp_f) + "°F",
+    FeelsLike: parseInt(data.current.feelslike_f) + "°F",
+    Humidity: parseInt(data.current.humidity) + "%",
+    Wind: data.current.wind_mph + " mph",
   };
 }
 

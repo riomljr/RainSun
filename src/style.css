@@ -1,0 +1,20 @@
+#container{
+ 
+}
+
+.name {
+  border-style: solid;
+}
+
+div {
+  border-style: solid;
+  padding: 20px;
+
+  margin: 20px;
+}
+
+.data{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}

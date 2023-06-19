@@ -1,8 +1,9 @@
 import './style.css';
 import getData from './fetchweather';
+import displayInfo from './displayinfo';
 
 
 
-getData().then(function(data) {
-  console.log(data.feelsLike);
-});
+getData().then((data) => displayInfo(data));
+  
+
