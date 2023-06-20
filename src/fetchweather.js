@@ -1,5 +1,5 @@
 
-async function getData (location = "New York") {
+async function getData (location = "Houston") {
   const key = 'ae97ffa5fd484ce4991153204232205';
   const baseUrl = 'http://api.weatherapi.com/v1/current.json?key=';
   const loc = '&q=' + location.toString() + '&aqi=no';
@@ -9,13 +9,18 @@ async function getData (location = "New York") {
   const response = await fetch(fullUrl, {mode: "cors"});
   const data = await response.json();
 
+  //console.log(data);
+
   return {
-    Name: data.location.name,
+    City: data.location.name,
+
     Weather: data.current.condition.text,
     Temp: parseInt(data.current.temp_f) + "°F",
     FeelsLike: parseInt(data.current.feelslike_f) + "°F",
     Humidity: parseInt(data.current.humidity) + "%",
     Wind: data.current.wind_mph + " mph",
+    Icon: data.current.condition.icon,
+
   };
 }
 

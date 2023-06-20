@@ -4,6 +4,6 @@ import displayInfo from './displayinfo';
 
 
 
-getData().then((data) => displayInfo(data));
+getData("Houston").then((data) => displayInfo(data));
   
 
