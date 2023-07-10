@@ -29,22 +29,18 @@ function displayInfo(info) {
         container.appendChild(element);
         }
     }
-    /*
-    const currentWeather = document.getElementsByClassName("Weather");
-    const imgSm = document.createElement("img");
-    imgSm.src = smallIcon;
-    currentWeather.appendChild(imgSm);
-    
-    */
+  
     }
   
     function getIcon(type){
       var icons = {
+        'overcast': cloudy,
         'cloudy': cloudy,
-        'party cloudy': partly,
+        'partly cloudy': partly,
         'sunny': sunny,
         'mist': mist,
         'rainy': rainy,
+        'thunder': thunder,
         'default': compass,
       };
       return (icons[type] || icons['default']);
@@ -52,7 +48,6 @@ function displayInfo(info) {
 
   
   getInfo(info);
-
 
   const img = document.querySelector("img");
   let icon = getIcon(weather);

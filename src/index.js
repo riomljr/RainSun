@@ -4,6 +4,19 @@ import displayInfo from './displayinfo';
 
 
 
-getData("Houston").then((data) => displayInfo(data));
-  
+function generate(info){
+  getData(info).then((data) => displayInfo(data));
+}
 
+function getCityName(){
+ let val = document.querySelector('#input');
+  return val.value;
+}
+
+const btn = document.querySelector('#button');
+btn.addEventListener('click', displayCityWeather);
+  //generate("");
+
+function displayCityWeather() {
+  generate(getCityName());
+  }
