@@ -4,12 +4,6 @@ import displayInfo from './displayinfo';
 import clearAll from './clear';
 
 
-
-function generate(info){
-  getData(info).then((data) => displayInfo(data))
-  .catch((err) => handleErr(err));
-}
-
 function handleErr(err){
   const body = document.querySelector("#container");
   const msg = document.createElement("h2");
@@ -22,6 +16,12 @@ function handleErr(err){
   body.appendChild(msg);
 
 }
+
+function generate(info){
+  getData(info).then((data) => displayInfo(data))
+  .catch((err) => handleErr(err));
+}
+
 function getCityName(){
  let val = document.querySelector('#input');
   return val.value;
@@ -35,4 +35,11 @@ function displayCityWeather() {
   clearAll();
   generate(getCityName());
 
+  
+
   }
+
+generate();
+
+let d = new Date();
+console.log( d);

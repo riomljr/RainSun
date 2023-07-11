@@ -40,12 +40,20 @@ function displayInfo(info) {
     };
     return (icons[type] || icons['default']);
   }
+//get time to adjust sun or moon animation
+  //let d = new Date();
+//console.log( d.getHours());
 
   getInfo(info);
 
   const img = document.querySelector("img");
   let icon = getIcon(weather);
   img.src = icon;
+
+  const box = document.querySelector('.searchBox');
+  const d = document.createElement('time');
+  d.innerText = new Date().toLocaleString();
+  box.appendChild(d);
 }
 
 export default displayInfo
