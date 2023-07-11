@@ -7,6 +7,7 @@ import wind from "./icons/wind.svg";
 import rainy from "./icons/Rainy.svg";
 import compass from "./icons/compass.svg";
 import mist from "./icons/mist.svg";
+import clear from "./icons/clear.svg";
 
 function displayInfo(info) {
   const container = document.getElementById('container');
@@ -27,6 +28,7 @@ function displayInfo(info) {
         }
       }
     }
+
   function getIcon(type){
     var icons = {
       'overcast': cloudy,
@@ -36,6 +38,7 @@ function displayInfo(info) {
       'mist': mist,
       'rainy': rainy,
       'thunder': thunder,
+      'clear': clear,
       'default': compass,
     };
     return (icons[type] || icons['default']);
@@ -52,7 +55,7 @@ function displayInfo(info) {
 
   const box = document.querySelector('.searchBox');
   const d = document.createElement('time');
-  d.innerText = new Date().toLocaleString();
+  d.innerText = new Date().toDateString();
   box.appendChild(d);
 }
 

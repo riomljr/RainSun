@@ -5,8 +5,11 @@ function clearAll() {
   while (main.firstChild) {
     main.removeChild(main.lastChild);
   }
+  const container = document.querySelector('.searchBox');
 
-  icon.src='';
+  while (container.lastChild.id !== 'subBox') {
+    container.removeChild(container.lastChild);
+  }
   
 }
 
