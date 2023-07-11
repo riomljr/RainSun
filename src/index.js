@@ -1,7 +1,9 @@
+import './reset.css';
 import './style.css';
 import getData from './fetchweather';
 import displayInfo from './displayinfo';
 import clearAll from './clear';
+
 
 
 function handleErr(err){
