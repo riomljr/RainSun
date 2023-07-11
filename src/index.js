@@ -34,12 +34,7 @@ btn.addEventListener('click', displayCityWeather);
 function displayCityWeather() {
   clearAll();
   generate(getCityName());
-
-  
-
   }
 
-generate();
+generate("New York");
 
-let d = new Date();
-console.log( d);
