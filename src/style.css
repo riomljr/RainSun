@@ -1,33 +1,34 @@
 body {
   display: flex;
-  justify-content: space-evenly;
-  align-content: space-around;
-
-
-}
-
-.searchBox {
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  padding: 2%;
-  max-width: 20%;
-  border-radius: 5%;
-  box-shadow: 5px 5px 10px 2px rgba(225, 223, 223, 0.8);
-  background-image: linear-gradient(to right, rgb(248, 243, 243), rgb(225, 224, 228));
-
+  align-content: space-around;
+  gap: 3%;
   
+}
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5%;
+}
+.searchBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+  max-width: 100%;
+  margin-bottom: 5%;
+  box-shadow: 5px 5px 10px 2px rgba(225, 223, 223, 0.8);
+  background-image: linear-gradient(to right, rgb(248, 243, 243), rgb(225, 224, 228)); 
 }
 
 #subBox {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 4px;
-  padding: 10%;
-  flex-shrink: 2;
-  
-  
+  padding: 1%;
+  max-width: 100%;
 }
 
 
@@ -35,10 +36,8 @@ time {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #input {
-  display: flex;
-  flex-shrink: 2;
+  max-width: 100%;
   text-align: center;
- 
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 
@@ -53,7 +52,7 @@ time {
 }
 
 #icon {
-  max-width: 50%;
+  max-width: 30%;
   box-shadow: 20px 5px 10px 1px rgba(223, 230, 231, 0.8);
   border-radius: 90%;
   background-image: linear-gradient(to right, rgba(246, 242, 242, 0), rgb(189, 188, 193));
@@ -61,15 +60,20 @@ time {
 
 #container{
  display: flex;
+ 
 }
 
-
+weather{
+  display: flex;
+  flex-wrap: wrap;
+}
 sub-weather{
   display: flex;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding: 15%;
-  margin: 5%;
   justify-content: center;
+  padding: 5%;
+  margin: 2%;
+  
   border-radius: 10%;
   box-shadow: 5px 5px 10px 2px rgba(225, 223, 223, 0.8);
   background-image: linear-gradient(to right, rgb(252, 248, 248), rgb(225, 224, 228));
