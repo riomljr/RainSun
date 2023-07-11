@@ -8,14 +8,11 @@ import rainy from "./icons/Rainy.svg";
 import compass from "./icons/compass.svg";
 import mist from "./icons/mist.svg";
 
-
-
-
-
 function displayInfo(info) {
   const container = document.getElementById('container');
+  const subContainer = document.createElement('weather')
+  container.appendChild(subContainer);
   let weather = (info.Weather).toLowerCase();
-
 
   function getInfo(object){
     for (const data in object){
@@ -26,36 +23,29 @@ function displayInfo(info) {
         let element = document.createElement('sub-weather');
         element.className = data;
         element.textContent = `${data}: ${object[data]}`;
-        container.appendChild(element);
+        subContainer.appendChild(element);
         }
+      }
     }
-  
-    }
-  
-    function getIcon(type){
-      var icons = {
-        'overcast': cloudy,
-        'cloudy': cloudy,
-        'partly cloudy': partly,
-        'sunny': sunny,
-        'mist': mist,
-        'rainy': rainy,
-        'thunder': thunder,
-        'default': compass,
-      };
-      return (icons[type] || icons['default']);
-    }
+  function getIcon(type){
+    var icons = {
+      'overcast': cloudy,
+      'cloudy': cloudy,
+      'partly cloudy': partly,
+      'sunny': sunny,
+      'mist': mist,
+      'rainy': rainy,
+      'thunder': thunder,
+      'default': compass,
+    };
+    return (icons[type] || icons['default']);
+  }
 
-  
   getInfo(info);
 
   const img = document.querySelector("img");
   let icon = getIcon(weather);
   img.src = icon;
-
-  
- 
-
 }
 
 export default displayInfo

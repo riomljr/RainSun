@@ -9,8 +9,6 @@ async function getData (location = "Houston") {
   const response = await fetch(fullUrl, {mode: "cors"});
   const data = await response.json();
 
-  //console.log(data);
-
   return {
     City: data.location.name,
 
